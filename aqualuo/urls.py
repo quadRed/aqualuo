@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
+from aqualuoApp import views
 
 urlpatterns = [
+    url(r"^api/plant", views.plantWebhook, name="webhook"),
+    
     path('admin/', admin.site.urls),
 ]
